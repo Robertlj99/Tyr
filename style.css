@@ -1,0 +1,267 @@
+/* Mobile first development */
+body {
+    font-size: 20px;
+    background-color: #111111;
+}
+
+
+
+/* Wrapper to hold gradient and navbar at top of page */
+.nav-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Gradient bar */
+.gradient-bar {
+    width: 100vw;
+    height: 1.5vh;
+    background: linear-gradient(-45deg, #ff0202, #9e0101, #935402, #ffc401);
+    background-size: 400% 400%;
+    -webkit-animation: gradbar 12s ease infinite;
+    -moz-animation: gradbar 12s ease infinite;
+    animation: gradbar 12s ease infinite;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Navigation bar */
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    background-color: #171616;
+    width: 100vw;
+    height: 8vh;
+    padding-bottom: 1vh;
+    margin: 0;
+}
+
+/* Navbar Sections */
+.navbar-left, .navbar-center, .navbar-right {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    gap: 1vw;
+}
+
+.navbar-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+
+.navbar-center {
+    justify-content: center;
+    padding-bottom: 1vh
+}
+
+.navbar-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+
+/* Navbar links */
+.navbar a {
+    text-decoration: none;
+}
+
+/* Formatting for Tyr logo */
+.navbar h1 {
+    font-size: 35px;
+    background: linear-gradient(-45deg, #ff0202, #9e0101, #935402, #ffc401);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-animation: gradbar 12s ease infinite;
+    -moz-animation: gradbar 12s ease infinite;
+    animation: gradbar 12s ease infinite;
+}
+
+/* Icon container */
+.icon_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Icon text formatting */
+.icon_container span {
+    font-size: 14px;
+    background: linear-gradient(-45deg, #ff0202, #9e0101, #935402, #ffc401);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-animation: gradbar 12s ease infinite;
+    -moz-animation: gradbar 12s ease infinite;
+    animation: gradbar 12s ease infinite;
+}
+
+/* Formatting for toolbar */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vh;
+    height: 5vh;
+}
+
+/* Formatting for icons */
+.fa-solid {
+    background: linear-gradient(-45deg, #ff0202, #9e0101, #935402, #ffc401);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-animation: gradbar 12s ease infinite;
+    -moz-animation: gradbar 12s ease infinite;
+    animation: gradbar 12s ease infinite;
+}
+
+/* Formatting for cards */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 20px;
+}
+
+.card {
+    width: 90vw;
+    height: 25vh;
+    background: #171616;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid #5c5c5c;
+}
+
+.card h1 {
+    color: white;
+    padding: 10px 16px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card span {
+    padding: 16px;
+    font-size: 14px;
+    color: ghostwhite;
+}
+
+/* Screen size querying */
+/* Small */
+@media (min-width: 640px) {
+
+}
+
+/* Medium, Ipad hits here */
+@media (min-width: 768px) {
+    body {
+        font-size: 22px;
+    }
+    .navbar h1 {
+        font-size: 40px;
+    }
+    .icon_container span {
+        font-size: 16px
+    }
+}
+/* Large, Ipad horizontally hits here*/
+@media (min-width: 1024px) {
+    .nav-wrapper {
+        bottom: unset;
+        top: 0;
+    }
+    .gradient-bar {
+        bottom: unset;
+        height: 1vh;
+    }
+    .navbar {
+        padding-top: 1vh;
+        padding-bottom: 0;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .card-container {
+        margin-top: 9vh;
+    }
+}
+
+/* XL, laptop hits here */
+@media (min-width: 1200px) {
+    .navbar {
+        height: 9vh;
+        grid-template-columns: 1fr 4fr 1fr;
+    }
+    .card-container {
+        margin-top: 10vh;
+    }
+}
+/* 2XL, desktop hits here */
+@media (min-width: 1536px) {
+    body {
+        font-size: 26px;
+    }
+    .gradient-bar {
+        height: 0.5vh;
+    }
+    .navbar {
+        height: 4.5vh;
+        grid-template-columns: 1fr 6fr 1fr;
+    }
+    .navbar h1 {
+        font-size: 45px;
+    }
+    .icon_container span {
+        font-size: 20px;
+    }
+    .card-container {
+        margin-top: 6.5vh;
+    }
+}
+/* Add padding to next thing to match height of navbar */
+
+/*Animation for gradient bar*/
+@-webkit-keyframes gradbar {
+    0% {
+        background-position: 0 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0 50%
+    }
+}
+
+@-moz-keyframes gradbar {
+    0% {
+        background-position: 0 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0 50%
+    }
+}
+
+@keyframes gradbar {
+    0% {
+        background-position: 0 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0 50%
+    }
+}

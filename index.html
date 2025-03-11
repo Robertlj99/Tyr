@@ -1,28 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <title>MEALS</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-sclae=1">
-        <link rel="stylesheet" href="styles/style.css">
-    </head>
+<head>
+    <title>Tyr</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-sclae=1">
+    <link rel="stylesheet" href="public/style.css">
+    <script src="https://kit.fontawesome.com/d009904b75.js" crossorigin="anonymous"></script>
+</head>
+<body>
 
-    <body>
-        <!-- Navbar -->
-        <div class="top-wrapper">
-            <div class="gradient-bar"></div>
-            <nav id="navbar" class="navbar">
-                <div class="navbar-left">
-                    <a href="#navbar">Home</a>
-                </div>
-                <div class="navbar-center">
-                    <h1>MEALS</h1>
-                </div>
-                <div class="navbar-right">
-                    <a href="#">Login</a>
-                </div>
-            </nav>
+    <!-- Navbar -->
+    <div class="nav-wrapper">
+        <div class="gradient-bar"></div>
+        <nav id="navbar" class="navbar">
+            <div class="navbar-left">
+                <a href="#navbar">
+                    <div class="icon_container">
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <span>Lifts</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="icon_container">
+                        <i class="fa-solid fa-timeline"></i>
+                        <span>Stats</span>
+                    </div>
+                </a>
+            </div>
+            <div class="navbar-center">
+                <h1>Tyr</h1>
+            </div>
+            <div class="navbar-right">
+                <a href="#">
+                    <div class="icon_container">
+                        <i class="fa-solid fa-table-list"></i>
+                        <span>Recipes</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="icon_container">
+                        <i class="fa-solid fa-fire-burner"></i>
+                        <span>Meals</span>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Cards -->
+    <div class="card-container">
+        <div class="card">
+            <h1>Weekly Lifts</h1>
+            <span>TODO: Chart lifts information here</span>
         </div>
-    </body>
+        <div class="card">
+            <h1>Weekly Meals</h1>
+            <span>TODO: Chart meals information here</span>
+        </div>
+        <div class="card">
+            <h1>Recent Recipes</h1>
+            <span>TODO: Show recent recipes here</span>
+        </div>
+    </div>
+</body>
 </html>
