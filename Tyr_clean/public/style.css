@@ -1,0 +1,128 @@
+/*Root Elements*/
+html {
+    background-color: rgb(30, 30, 30);
+    font-size: 18px;
+}
+
+body {
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Banner and navbar components*/
+.tyr-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*-Navbar*/
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    background-color: rgb(60, 60, 60);
+    width: 100vw;
+    height: 8vh;
+    margin: 0;
+}
+
+.navbar-left, .navbar-center, .navbar-right {
+    gap: 1vw;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.navbar-left {
+    display: flex;
+}
+
+/*--Logo*/
+.navbar-left figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-left img {
+    max-width: 225%;
+}
+
+/*--Icons*/
+.navbar-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 1vh;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icon-container span {
+    font-size: 0.75rem;
+    color: rgb(180,0,0);
+}
+
+.icon-container i {
+    color: rgb(180,0,0);
+}
+
+/*Card formatting*/
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.intro-card {
+    width: 90vw;
+    height: 7vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-card h1 {
+    font-size: 1rem;
+    color: whitesmoke;
+}
+
+.intro-card i {
+    font-size: 0.75rem;
+    color: whitesmoke;
+}
+
+.card {
+    width: 90vw;
+    height: 22vh;
+    background: rgb(40,40,40);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid rgb(100,100,100)
+}
+
+.card h1 {
+    color: white;
+    padding: 10px 16px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card span {
+    padding: 16px;
+    font-size: 14px;
+    color: ghostwhite;
+}
+
